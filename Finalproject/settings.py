@@ -84,16 +84,20 @@ AUTH_USER_MODEL = 'adminuser.AdminUser'
 
 
 DATABASES = {
+    # 'default': {
+    # 'ENGINE': 'django.db.backends.mysql',
+    # 'NAME': 'mysql',
+    # 'USER': 'root',
+    # 'PASSWORD': '',
+    # 'HOST': 'localhost',
+    # 'PORT': '3306',
+    # 'OPTIONS': {
+    #     'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+    #     }
+    # }
     'default': {
-    'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'newdata',
-    'USER': 'root',
-    'PASSWORD': '',
-    'HOST': 'localhost',
-    'PORT': '3306',
-    'OPTIONS': {
-        'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-        }
+        'ENGINE': 'django.db.backends.sqlite3',  # Use the SQLite backend
+        'NAME': BASE_DIR / 'db.sqlite3',  # This points to the SQLite database file
     }
 }
 
